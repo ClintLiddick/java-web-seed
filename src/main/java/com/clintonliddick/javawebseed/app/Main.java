@@ -5,12 +5,18 @@ import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 import org.glassfish.jersey.servlet.ServletContainer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Server start-up class
  */
 public final class Main {
     public static void main(String[] args) throws Exception {
+        final Logger logger = LoggerFactory.getLogger(Main.class);
+        logger.debug("debug logging enabled");
+        logger.info("info logging enabled");
+
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.NO_SESSIONS);
         context.setContextPath("/rest");
 
