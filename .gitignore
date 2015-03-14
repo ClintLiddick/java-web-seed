@@ -1,0 +1,12 @@
+# IDE files
+.idea/
+*.iml
+.project
+.classpath
+
+# gradle tmp
+.gradle/
+
+# build folder
+build/
+out/
